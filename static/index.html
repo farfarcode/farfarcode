@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Vue JS -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+<script src="https://unpkg.com/marked@0.3.6"></script>
+<script src="https://unpkg.com/lodash@4.16.0"></script>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<!-- Gentium font -->
+<link href="https://fonts.googleapis.com/css?family=Gentium+Basic:bold" rel="stylesheet">
+
+<!-- Emoji CSS -->
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+<!-- FarFarCode CSS -->
+<link href="/css/farfarcode.css" rel="stylesheet">
+
+<title>Remote jobs</title>
+</head>
+<body style="padding-top: 75px;">
+<div id="app">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #2c3e50;"> <!--  -->
+<span class="navbar-brand" style="font-family: 'Gentium Basic', serif; font-size: 32px;">
+FarFarCode<sup><small class="text-muted" style="font-family: Arial, Helvetica, sans-serif;">beta</small></sup>
+</span>
+<span class="navbar-text">
+Удаленные вакансии в IT
+</span>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+<div class="navbar-nav">
+<router-link to="/"><a class="nav-item nav-link active">Вакансии <span class="sr-only">(current)</span></a></router-link>
+<router-link to="/lalala"><a class="nav-item nav-link" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Блог</a></router-link>
+<form class="form-inline">
+<router-link to="/postjob">
+<button class="btn btn-success" type="button">Разместить вакансию</button>
+</router-link>
+</form>
+</div>
+</div>
+</nav>
+<div class="container">
+<router-view></router-view>
+<p class="footer text-center">Сайт разработан на Go и Vue.js. <a href="#">Козлов Денис</a>.</p>
+
+</div>
+</div>
+
+<!-- Main and other JavaScript -->
+<script src="/dist/bundle.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
